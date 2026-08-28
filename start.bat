@@ -100,8 +100,22 @@ echo the first generation if it isn't already cached in models\
 echo.
 
 REM --- 7. Start the server and open the browser ---------------------------
-echo Starting AI Voice Studio on http://localhost:8000 ...
+echo.
+echo Starting AI Voice Studio...
+echo   On this PC:              http://localhost:8000
+echo   From your phone/tablet:  http://ADDRESS-BELOW:8000  (same Wi-Fi network)
+echo.
+echo Your PC's network address(es):
+for /f "delims=" %%a in ('powershell -NoProfile -Command "(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notlike '169.254.*' -and $_.IPAddress -ne '127.0.0.1' }).IPAddress" 2^>nul') do (
+    echo   http://%%a:8000
+)
+echo.
+echo If this is the first time, Windows Firewall may ask to allow Python
+echo to accept connections - choose "Allow access" (Private networks) so
+echo other devices on your Wi-Fi can reach it.
+echo.
+
 start "" http://localhost:8000
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000
 
 pause

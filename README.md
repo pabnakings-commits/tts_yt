@@ -58,10 +58,38 @@ If you ever want to run it manually instead of via the script:
 
 ```
 .venv\Scripts\activate
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000
 ```
 
 then open http://localhost:8000 in your browser.
+
+### Testing from your phone or tablet
+
+The AI itself always runs on your PC's CPU — a phone/tablet can't do the
+generation. But since the app is a normal local web app, any device on the
+**same Wi-Fi network** as your PC can open its UI in a browser and use it
+remotely, while your PC does the actual work.
+
+1. Run `start.bat` on your PC as usual. It now binds to `0.0.0.0`, and
+   prints your PC's network address(es), e.g.:
+   ```
+   Your PC's network address(es):
+     http://192.168.1.42:8000
+   ```
+2. The first time, **Windows Firewall may prompt** to allow Python to
+   accept connections — choose **Allow access** for Private networks.
+3. On your phone or tablet (connected to the same Wi-Fi), open
+   `http://192.168.1.42:8000` (using the address your PC printed) in its
+   browser. You'll see the same Studio/Projects/Settings UI.
+
+Notes:
+- Your PC must stay on and `start.bat` must keep running for other
+  devices to reach it.
+- This only works on the same local network — it is **not** exposed to
+  the internet, so don't do this on a public/untrusted Wi-Fi network
+  (e.g. a coffee shop) unless you trust everyone on it.
+- If your PC's IP address changes (e.g. after reconnecting to Wi-Fi),
+  just re-check the address `start.bat` prints, or run `ipconfig`.
 
 ---
 
