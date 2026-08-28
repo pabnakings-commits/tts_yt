@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node / frontend build
+frontend/node_modules/
+frontend/dist/
+
+# Downloaded model files (auto-downloaded on first run, ~350MB)
+models/*.onnx
+models/*.bin
+models/*.part
+
+# Runtime data (user-specific, generated at runtime)
+output/*
+!output/.gitkeep
+projects/*
+!projects/.gitkeep
+logs/*.log*
+backend/config/user_settings.json
+
+# OS / editor
+.DS_Store
+*.swp
+frontend/tsconfig.tsbuildinfo

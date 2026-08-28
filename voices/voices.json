@@ -1,0 +1,78 @@
+{
+  "engine": "kokoro",
+  "model": "kokoro-v1.0",
+  "voices": [
+    {
+      "id": "am_michael",
+      "name": "Documentary Male",
+      "gender": "male",
+      "style": "documentary",
+      "language": "en-us",
+      "description": "Grounded, professional American male voice. Great for documentaries and explainers."
+    },
+    {
+      "id": "am_fenrir",
+      "name": "Deep Male",
+      "gender": "male",
+      "style": "deep",
+      "language": "en-us",
+      "description": "Deep, intense American male voice. Good for dramatic storytelling and trailers."
+    },
+    {
+      "id": "am_puck",
+      "name": "Natural Male",
+      "gender": "male",
+      "style": "natural",
+      "language": "en-us",
+      "description": "Conversational, natural-sounding American male voice."
+    },
+    {
+      "id": "am_echo",
+      "name": "Energetic Male",
+      "gender": "male",
+      "style": "energetic",
+      "language": "en-us",
+      "description": "Upbeat, energetic American male voice for high-energy content."
+    },
+    {
+      "id": "am_onyx",
+      "name": "Calm Male",
+      "gender": "male",
+      "style": "calm",
+      "language": "en-us",
+      "description": "Calm, measured American male voice for relaxed narration."
+    },
+    {
+      "id": "af_heart",
+      "name": "Documentary Female",
+      "gender": "female",
+      "style": "documentary",
+      "language": "en-us",
+      "description": "Warm, friendly American female voice. The Kokoro default voice, excellent all-round narrator."
+    },
+    {
+      "id": "af_bella",
+      "name": "Natural Female",
+      "gender": "female",
+      "style": "natural",
+      "language": "en-us",
+      "description": "Natural, engaging American female voice."
+    },
+    {
+      "id": "af_nicole",
+      "name": "Calm Female",
+      "gender": "female",
+      "style": "calm",
+      "language": "en-us",
+      "description": "Soft-spoken, calm American female voice."
+    },
+    {
+      "id": "af_sky",
+      "name": "Energetic Female",
+      "gender": "female",
+      "style": "energetic",
+      "language": "en-us",
+      "description": "Bright, energetic American female voice for upbeat content."
+    }
+  ]
+}
